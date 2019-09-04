@@ -78,18 +78,21 @@ div.ticket-section {
 }
 
 a.ticket-button, a.ticket-button:visited {
-  background-color: #721f12;
+  background: #721f12 url(ticket-orange.png) center left no-repeat;
+  background-position: .5rem;
+  background-size: 1.75rem;
   border-radius: 1rem;
   border: 1px solid #f6a73b;
   color: #f6a73b;
   display: inline-block;
-  padding: .5rem 1.5rem;
+  padding: .5rem .5rem .5rem 2.75rem;
   text-decoration: none;
   text-transform: lowercase;
 }
 
 a.ticket-button:active, a.ticket-button:hover {
   background-color: #58bc6f;
+  background-image: url(ticket-white.png);
   border-color: transparent;
   color: white;
 }
