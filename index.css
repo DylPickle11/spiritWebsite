@@ -25,11 +25,14 @@ body {
 
 h1#show-title {
   font-family: Tenderleaf, Helvetica, Arial, sans-serif;
-  font-size: 5rem;
   font-weight: normal;
-  letter-spacing: 2.5rem;
   margin: 0;
   padding: 0;
+  width: 100%;
+}
+
+h1#show-title img {
+  width: 100%;
 }
 
 nav ul {
@@ -52,12 +55,16 @@ nav ul li:last-child::after {
   display: none;
 }
 
-nav ul a, nav ul a:visited {
+a, a:visited {
   color: #f6a73b;
 }
 
-nav ul a:active, nav ul a:hover {
+a:active, a:hover {
   color: #58bc6f;
+}
+
+img#tree {
+  width: 100%;
 }
 
 div#content {
@@ -88,15 +95,15 @@ a.ticket-button, a.ticket-button:visited {
 }
 
 a.ticket-button:active, a.ticket-button:hover {
-  background-color: #58bc6f;
-  background-image: url(ticket-white.png);
-  border-color: transparent;
-  color: white;
+  background-color: white;
+  background-image: url(ticket-green.png);
+  border-color: #58bc6f;
+  color: #58bc6f;
 }
 
 div.horizontal-rule {
   border-bottom: 1px solid #721f12;
-  margin: 2rem auto 1rem auto;
+  margin: 1rem auto;
   width: 40%;
 }
 
@@ -109,20 +116,25 @@ h2 {
   color: #f6a73b;
   font-size: 1.5rem;
   font-weight: normal;
-  margin: 0;
+  line-height: 1.5rem;
+  margin: 0 0 1rem 0;
   padding: 0;
   text-transform: lowercase;
 }
 
-div.act-summary {
-  box-sizing: content-box;
-  display: inline-block;
-  width: 49%;
+div.acts {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+span.act-summary {
+  padding: .25rem;
 }
 
 div#company {
   margin: auto;
-  width: 700px;
+  max-width: 700px;
 }
 
 div#company h3 {
@@ -156,9 +168,70 @@ div#company ul li:last-child::after {
   display: none;
 }
 
+div#shows-list div.show {
+  margin-bottom: 1rem;
+}
+
+div#shows h3 {
+  color: #f6a73b;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-transform: lowercase;
+}
+
+div#photo-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+div#photo-grid div.tile {
+  border-radius: 1rem;
+  height: 120px;
+  margin: 0 10px 10px 10px;
+  overflow: hidden;
+  position: relative;
+  width: 120px;
+}
+
+div#photo-grid div.tile img {
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+
+div#press ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+div#press ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+div#press ul li::after {
+  content: '/';
+  margin: 0 .5rem;
+}
+
+div#press ul li:last-child::after {
+  display: none;
+}
+
 footer {
   font-size: .75rem;
-  margin-top: 2rem;
 }
 
 footer a, footer a:visited {

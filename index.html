@@ -4,47 +4,55 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <link rel="stylesheet" href="main.css">
+      <link rel="stylesheet" href="/index.css">
       <title>SPIRIT</title>
+
+      <script
+          src="https://code.jquery.com/jquery-3.4.1.min.js"
+          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+          crossorigin="anonymous"></script>
   </head>
   <body>
     <header id="header">
-      <h1 id="show-title"><img alt="SPIRIT" src="header.png" /></h1>
+      <h1 id="show-title"><img alt="SPIRIT" src="/header.png" /></h1>
       <nav id="nav-bar">
         <ul>
           <li><a href="#summary">About</a></li>
           <li><a href="#company">Company</a></li>
           <li><a href="#shows">Shows</a></li>
-          <li><a href="#tickets">Tickets</a></li>
+          <li><a href="#photos">Photos</a></li>
+          <li><a href="#press">Press</a></li>
         </ul>
       </nav>
-      <img id="tree" src="tree.png" alt="The tree with blood orange bark." />
+      <img id="tree" src="/tree.png" alt="The tree with blood orange bark." />
     </header>
     <div id="content">
       <p id="summary">
-        An Afro-futurist and -surrealist theater project from poet-playwrights Porsha Olayiwola and
-        Marshall "Gripp" Gillson.
+        An Afro-futurist and <span style="white-space: nowrap;">-surrealist</span> theater project
+        from poet-playwrights Porsha Olayiwola and Marshall "Gripp" Gillson.
       </p>
 
-      <div class="act-summary">
-        <h2>Act One: Exonerate</h2>
-        <p>
-          In a dystopian future, a makeshift family embarks on a quest to find healing from
-          generations of violence.
-        </p>
-      </div>
-      <div class="act-summary">
-        <h2>Act Two: Regrow</h2>
-        <p>
-          In an alternative history, a community searches for balance when newcomers test their
-          shared values.
-        </p>
+      <div class="acts">
+        <span class="act-summary">
+          <h2>Act One: Exonerate</h2>
+          <p>
+            In a dystopian future, a makeshift family embarks on a quest to find healing from
+            generations of violence.
+          </p>
+        </span>
+        <span class="act-summary">
+          <h2>Act Two: Regrow</h2>
+          <p>
+            In an alternative history, a community searches for balance when newcomers test their
+            shared values.
+          </p>
+        </span>
       </div>
 
       <p>Production funded by the Boston Foundation.</p>
 
       <div class="ticket-section">
-        <a class="ticket-button" href="http://tickets.spirit.land/">Get a Ticket</a>
+        <a class="ticket-button" href="https://tickets.spirit.land/">Get a Ticket</a>
       </div>
 
       <div class="horizontal-rule"></div>
@@ -74,11 +82,54 @@
       <div id="shows">
         <h2>Shows</h2>
 
+        <div id="shows-list">
+          <div class="show">
+            <h3>Isabella Stewart Gardner Museum</h3>
+            <div class="show-location">Boston, MA</div>
+            <div class="directions"><a href="#">Directions</a></div>
+            <div class="showtime">October 10, 2019, 7:00PM</div>
+          </div>
+          <div class="show">
+            <h3>The Strand Theatre</h3>
+            <div class="show-location">Boston, MA</div>
+            <div class="directions"><a href="#">Directions</a></div>
+            <div class="showtime">October 14, 2019, 7:00PM</div>
+          </div>
+        </div>
+
         <div class="ticket-section">
-          <a class="ticket-button" href="http://tickets.spirit.land/">Get a Ticket</a>
+          <a class="ticket-button" href="https://tickets.spirit.land/">Get a Ticket</a>
         </div>
       </div>
+
+      <div class="horizontal-rule"></div>
+
+      <div id="photos">
+        <h2>Photos</h2>
+        <div id="photo-grid">
+          <div class="tile"><img src="/img/1.png" alt="" data-id="1" /></div>
+          <div class="tile"><img src="/img/2.png" alt="" data-id="2" /></div>
+        </div>
+        <div id="frame"></div>
+      </div>
+
+      <div class="horizontal-rule"></div>
+
+      <div id="press">
+        <h2>Press</h2>
+        <ul>
+          <li>
+            <a href="/press/Afro-futurism_Comes_to_Boston_as_Local_Playwrights_Share_New_Work.pdf">
+              Press Release
+            </a>
+          </li><li><a href="/press/SPIRIT_Poster.pdf">Production Poster</a></li>
+        </ul>
+        <p>You can direct additional press inquiries to
+        <a href="mailto:press@spirit.land">press [at] spirit [dot] land</a>.</p>
+      </div>
     </div>
+
+    <div class="horizontal-rule"></div>
 
     <footer>
       Ticket icon made by <a href="https://www.flaticon.com/authors/dave-gandy">Dave Gandy</a>.
