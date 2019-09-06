@@ -32,7 +32,7 @@ h1#show-title {
 }
 
 h1#show-title img {
-  width: 100%;
+  max-width: 100%;
 }
 
 nav ul {
@@ -64,7 +64,7 @@ a:active, a:hover {
 }
 
 img#tree {
-  width: 100%;
+  max-width: 100%;
 }
 
 div#content {
@@ -188,7 +188,7 @@ div#photo-grid {
   justify-content: center;
 }
 
-div#photo-grid div.tile {
+div#photo-grid div.thumb {
   border-radius: 1rem;
   height: 120px;
   margin: 0 10px 10px 10px;
@@ -197,7 +197,7 @@ div#photo-grid div.tile {
   width: 120px;
 }
 
-div#photo-grid div.tile img {
+div#photo-grid div.thumb img {
   height: 100%;
   left: 50%;
   position: absolute;
@@ -206,6 +206,26 @@ div#photo-grid div.tile img {
   -webkit-transform: translate(-50%,-50%);
       -ms-transform: translate(-50%,-50%);
           transform: translate(-50%,-50%);
+}
+
+div#frame {
+  margin: auto;
+  position: relative;
+  width: 700px;
+}
+
+div#frame img {
+  border-radius: 2rem;
+}
+
+div#frame span#photo-credit {
+  background-image: radial-gradient(farthest-side at bottom right, #040707, rgba(0,0,0,0));
+  display: block;
+  right: 0;
+  padding: .5rem 1rem .5rem 6rem;
+  position: absolute;
+  text-align: right;
+  bottom: 0;
 }
 
 div#press ul {
