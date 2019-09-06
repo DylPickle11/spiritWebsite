@@ -211,11 +211,12 @@ div#photo-grid div.thumb img {
 div#frame {
   margin: auto;
   position: relative;
-  width: 700px;
+  max-width: 700px;
 }
 
 div#frame img {
   border-radius: 2rem;
+  max-width: 100%;
 }
 
 div#frame span#photo-credit {
