@@ -1,17 +1,18 @@
 const metadata = [
   {
     alt: (
-        'Writers Porsha Olayiwola and Marshall "Gripp" Gillson looking suave.'),
+        'Writers Porsha Olayiwola and Marshall &quot;Gripp&quot; Gillson ' +
+        'looking suave.'),
     credit: 'Marshall Gillson',
   },
   {
     alt: (
-        'Writers Porsha Olayiwola and Marshall "Gripp" Gillson gazing into ' +
-        'the trees.'),
+        'Writers Porsha Olayiwola and Marshall &quot;Gripp&quot; Gillson ' +
+        'gazing into the trees.'),
     credit: 'Sam Rush',
   },
   {
-    alt: 'Cast member Cheyenne Harvey leads an exercise during rehearsal.',
+    alt: 'Cast member Cheyenne Harvey leading an exercise during rehearsal.',
     credit: 'Cheyenne Harvey',
   },
 ];
@@ -19,9 +20,13 @@ const metadata = [
 let flipPic = (num) => {
   let frame = $('div#frame');
   frame.empty();
-  let photo = (
-      '<img alt="' + metadata[num].alt + '"src="/img/' + num  +
-      '.png" /><span id="photo-credit">📸' + metadata[num].credit + '</span>');
+  let photo = `
+    <img
+        alt="${metadata[num].alt}"
+        src="/img/${num}.png"
+        title="${metadata[num].alt}" />
+    <span id="photo-credit">📸${metadata[num].credit}</span>
+  `
   frame.append(photo);
 };
 
@@ -39,9 +44,14 @@ let init = () => {
 };
 
 let makeThumbNum = (num) => {
-  let thumb = $(
-      '<button class="thumb"><img src="/img/' + num + '.png" alt="' +
-      metadata[num].alt  + '" /></button>');
+  let thumb = $(`
+    <button class="thumb">
+      <img
+          alt="${metadata[num].alt}"
+          src="/img/${num}.png"
+          title="${metadata[num].alt}" />
+    </button>
+  `);
   $('div#photo-grid').append(thumb);
   return thumb;
 };
