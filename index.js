@@ -10,6 +10,10 @@ const metadata = [
         'the trees.'),
     credit: 'Sam Rush',
   },
+  {
+    alt: 'Cast member Cheyenne Harvey leads an exercise during rehearsal.',
+    credit: 'Cheyenne Harvey',
+  },
 ];
 
 let flipPic = (num) => {
@@ -29,15 +33,15 @@ let init = () => {
     showActions.empty();
   }
 
-  for (let i = 0; i < metadata.length; i++) {
+  for (let i = metadata.length - 1; i >= 0; i--) {
     makeThumbNum(i).click(() => { flipPic(i); });
   }
 };
 
 let makeThumbNum = (num) => {
   let thumb = $(
-      '<div class="thumb"><img src="/img/' + num + '.png" alt="' +
-      metadata[num].alt  + '" /></div>');
+      '<button class="thumb"><img src="/img/' + num + '.png" alt="' +
+      metadata[num].alt  + '" /></button>');
   $('div#photo-grid').append(thumb);
   return thumb;
 };

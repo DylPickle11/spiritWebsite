@@ -218,16 +218,18 @@ div#photo-grid {
   justify-content: center;
 }
 
-div#photo-grid div.thumb {
+div#photo-grid button.thumb {
+  border: none;
   border-radius: 1rem;
+  cursor: pointer;
   height: 120px;
-  margin: 0 10px 10px 10px;
+  margin: 0 1rem 1rem 1rem;
   overflow: hidden;
   position: relative;
   width: 120px;
 }
 
-div#photo-grid div.thumb img {
+div#photo-grid button.thumb img {
   height: 100%;
   left: 50%;
   position: absolute;
@@ -239,7 +241,7 @@ div#photo-grid div.thumb img {
 }
 
 div#frame {
-  margin: auto;
+  margin: 1rem auto 0 auto;
   position: relative;
   max-width: 700px;
 }
