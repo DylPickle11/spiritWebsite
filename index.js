@@ -20,8 +20,8 @@ let flipPic = (num) => {
   let frame = $('div#frame');
   frame.empty();
   let photo = (
-      '<img src="/img/' + num  + '.png" /><span id="photo-credit">📸' +
-      metadata[num].credit + '</span>');
+      '<img alt="' + metadata[num].alt + '"src="/img/' + num  +
+      '.png" /><span id="photo-credit">📸' + metadata[num].credit + '</span>');
   frame.append(photo);
 };
 
