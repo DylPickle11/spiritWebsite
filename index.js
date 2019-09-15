@@ -22,6 +22,13 @@ let flipPic = (num) => {
 };
 
 let init = () => {
+  let showActions = $('ul.show-actions');
+  if ((new Date($.now())).getTime() > 1568649600000) {
+    showActions.show();
+  } else {
+    showActions.empty();
+  }
+
   for (let i = 0; i < metadata.length; i++) {
     makeThumbNum(i).click(() => { flipPic(i); });
   }

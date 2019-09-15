@@ -103,28 +103,32 @@ p {
   padding: 0;
 }
 
-div.ticket-section {
-  margin: 1rem 0;
+ul.show-actions {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-a.ticket-button, a.ticket-button:visited {
-  background: #721f12 url(/asset/ticket.png) center left no-repeat;
-  background-position: .5rem;
-  background-size: 1.25rem;
-  border-radius: 1rem;
-  border: 1px solid #f6a73b;
-  color: #f6a73b;
+ul.show-actions li {
   display: inline-block;
-  padding: .5rem .5rem .5rem 2rem;
-  text-decoration: none;
-  text-transform: lowercase;
 }
 
-a.ticket-button:active, a.ticket-button:hover {
-  background-color: white;
-  background-image: url(/asset/ticket-hover.png);
-  border-color: #58bc6f;
+ul.show-actions li a, div.show-actions li a:visited {
   color: #58bc6f;
+}
+
+ul.show-actions li a:active, div.show-actions li a:hover {
+  color: #f6a73b;
+}
+
+ul.show-actions li::after {
+  content: "/";
+  margin: 0 1rem;
+}
+
+ul.show-actions li:last-child::after {
+  display: none;
 }
 
 div.horizontal-rule {
