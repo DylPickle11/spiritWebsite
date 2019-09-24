@@ -212,6 +212,10 @@ div#shows h3 {
   text-transform: lowercase;
 }
 
+p#dress-code {
+  font-weight: bold;
+}
+
 div#photo-grid {
   display: flex;
   flex-direction: row;
