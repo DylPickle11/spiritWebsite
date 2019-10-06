@@ -131,6 +131,11 @@ ul.show-actions li:last-child::after {
   display: none;
 }
 
+ul.show-actions span.sold-out {
+  color: red;
+  font-style: italic;
+}
+
 div.horizontal-rule {
   border-bottom: 1px solid #721f12;
   margin: 1rem auto;
