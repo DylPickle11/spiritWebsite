@@ -15,6 +15,10 @@ const metadata = [
     alt: 'Cast member Cheyenne Harvey leading an exercise during rehearsal.',
     credit: 'Cheyenne Harvey',
   },
+  {
+    alt: 'The cast swaddled.',
+    credit: 'Tatiana M.R. Johnson',
+  },
 ];
 
 let flipPic = (num) => {
